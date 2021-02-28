@@ -14,6 +14,7 @@ namespace csharp_hw_1._1
             b = int.Parse(Console.ReadLine());
             Console.WriteLine("please input the sign:"); //简单分三次交互实现计算功能
             c = Console.Read();
+            Console.ReadLine();
             switch (c)  //用switch分辨
             {
                 case 42: d = a * b; break;
@@ -23,6 +24,7 @@ namespace csharp_hw_1._1
                 default: break;
             }
             Console.WriteLine("the answer is : {0}",d);
+            calcu();
         }
 
         static void calcu()
@@ -40,7 +42,7 @@ namespace csharp_hw_1._1
                 {
                     c = str_ch[i];
                     str_1 = str.Substring(0, i);str_1.Trim();
-                    str_2 = str.Substring(i + 1, max - i - 1); str_2.Trim();
+                    str_2 = str.Substring(i + 1, str.Length - i - 1); str_2.Trim();
                     break;
                 }
             }
